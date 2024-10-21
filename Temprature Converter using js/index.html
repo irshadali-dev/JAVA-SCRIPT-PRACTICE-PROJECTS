@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temprature Converter</title>
+    <script src="script.js"></script>
+    <style>
+      body {
+        padding: 50px 100px;
+      }
+      h1 {
+        text-align: center;
+      }
+      #container {
+        text-align: center;
+        padding: 50px;
+        background: #3d88df;
+      }
+      .input-div {
+        display: inline-block;
+      }
+      .inp {
+        padding: 5px 10px;
+        margin: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        width: 250px;
+        text-align: center;
+      }
+      label {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="temp">
+      <h1 id="h1">Temprature Converter</h1>
+      <div id="container">
+        <div class="input-div">
+          <label>Celsius</label><br />
+          <input type="number" value="0" id="cel" class="inp" />
+        </div>
+        <div class="input-div">
+          <label>Fahrenheit</label><br />
+          <input type="number" value="32" id="fah" class="inp" />
+        </div>
+      </div>
+    </div>
+    <script>
+      let temp = document.getElementById("temp");
+      temp.setAttribute(
+        "style",
+        "border:1px solid grey;padding:10px;border-radius:10px"
+      );
+
+      let container = document.getElementById("container");
+      container.style.cssText = "border-radius:10px;border:1px solid grey;";
+
+      let h1 = document.getElementById("h1");
+      h1.style.cssText =
+        "border-radius:10px;border:1px solid grey;background:#D3D3D3;padding:5px ";
+
+      let cel = document.getElementById("cel");
+      let fah = document.getElementById("fah");
+
+      cel.addEventListener("input", function () {
+        let c = this.value;
+        let f = (c * 9) / 5 + 32;
+        if (!Number.isInteger(f)) {
+          f = f.toFixed(4);
+        }
+        fah.value = f;
+      });
+      fah.addEventListener("input", function () {
+        let f = this.value;
+        let c = ((f - 32) * 5) / 9;
+        if (!Number.isInteger(c)) {
+          c = c.toFixed(4);
+        }
+        cel.value = c;
+      });
+    </script>
+  </body>
+</html>

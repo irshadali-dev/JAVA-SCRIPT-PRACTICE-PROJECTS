@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div id="form-container">
+      <h2>Log in</h2>
+      <form action="" onsubmit="return validateForm()">
+        <input type="text" placeholder="User name" id="username" /><br />
+        <p id="userError" class="error"></p>
+        <input type="password" placeholder="Password" id="password" /><br />
+        <p id="passError" class="error"></p>
+        <input type="submit" id="btn" />
+      </form>
+    </div>
+  </body>
+</html>

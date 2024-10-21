@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="slide">
+        <img
+          src="Images/29049_3_11zon.jpg"
+          alt=""
+        />
+        <div class="caption">Caption text 1</div>
+      </div>
+
+      
+      <div class="slide">
+        <img
+          src="Images/28889_1_11zon.jpg"
+          alt=""
+          class="img2"
+        />
+        <div class="caption">Caption text 2</div>
+      </div>
+
+      <div class="slide">
+        <img
+          src="Images/28890_2_11zon.jpg"
+          alt=""
+          class="img3"
+        />
+        <div class="caption">Caption text 3</div>
+      </div>
+
+      <div class="slide ">
+        <img
+          src="Images/19994897_4_11zon.jpg"
+          alt=""
+          class="img4"
+      /> 
+        <div class="caption">Caption text 4</div>
+      </div>
+      <span class="arrow prev" onclick="controller(-1)">&#10094</span>
+      <span class="arrow next" onclick="controller(+1)">&#10095</span>
+    </div>
+  </body>
+</html>
